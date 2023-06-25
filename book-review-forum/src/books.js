@@ -47,6 +47,30 @@ const books = [
         Author: "Peter Hollins",
         title: "The Science of Intelligent Decision Making",
     },
+    {
+        image: {
+            src: "https://m.media-amazon.com/images/I/51D9E285XLL.jpg",
+            alt: "The East Indian - Book",
+        },
+        Author: "Brinda Charry ",
+        title: "The East Indian",
+    },
+    {
+        image: {
+            src: "https://m.media-amazon.com/images/I/51GcCvYyKbL.jpg",
+            alt: "Between Two Moons - Book",
+        },
+        Author: "Aisha Abdel Gawad",
+        title: "Between Two Moons",
+    },
+    {
+        image: {
+            src: "https://m.media-amazon.com/images/I/51q5irsID8L._SY346_.jpg",
+            alt: "Loot - Book",
+        },
+        Author: "Tania James",
+        title: "Loot",
+    },
 ];
 
 export default books;
