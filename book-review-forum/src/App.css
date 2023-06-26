@@ -5,3 +5,14 @@ body {
 ion-icon {
   color: #fafafa;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.dataResult {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

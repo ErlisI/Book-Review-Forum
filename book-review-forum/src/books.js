@@ -45,7 +45,7 @@ const books = [
             alt: "The Science of Intelligent Decision Making - Book",
         },
         Author: "Peter Hollins",
-        title: "The Science of Intelligent Decision Making",
+        title: "The Science of Intelligent Decision Making The Science of Intelligent Decision Making",
     },
     {
         image: {

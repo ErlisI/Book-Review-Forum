@@ -1,3 +1,6 @@
+import SearchBar from "./SearchBar";
+import books from './books';
+
 export default function NavBar() {
   return (
     <>
@@ -29,24 +32,10 @@ export default function NavBar() {
             </div>
           </div>
 
-          <div className="ml-auto w-1/4">
-              <div className="flex">
-                <input
-                  type="search"
-                  className="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-gray-50 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-gray-50 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-gray-50 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none"
-                  aria-label="Search"
-                  aria-describedby="button-addon3" />
+          {/* Search Bar */}
+          <SearchBar data={books}/>
 
-                <button
-                  className="text-gray-50 relative z-[2] rounded-r border-2 border-primary px-6 py-2 text-xs font-medium uppercase text-primary transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
-                  type="button"
-                  id="button-addon3"
-                  data-te-ripple-init>
-                  Search
-                </button>
-              </div>
-          </div>
-
+          {/* Icons */}
           <div className="ml-auto flex flex-wrap justify-end items-center p-4">
             <div className="hidden w-full md:block md:w-auto" id="navbar-default">
               <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
