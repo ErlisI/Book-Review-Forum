@@ -13,6 +13,28 @@ ion-icon {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .dataResult {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/*Overlaying images and showing the star*/
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 97.5%;
+  background-color: #424242;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.b-Image:hover .overlay {
+  opacity: 0.5;
+}
+
+.b-Image:hover .b-Star{
+  visibility: visible;
 }
