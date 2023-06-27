@@ -2,7 +2,7 @@ import { PropTypes } from 'prop-types';
 
 export default function Book({ book }) {
   // pull data from argument
-  const { image, Author, title } = book; // Destructure the 'books' object
+  const { image, author, title } = book; // Destructure the 'books' object
 
   return (
     <div className='grid justify-items-center pb-14'>
@@ -23,7 +23,7 @@ export default function Book({ book }) {
       </div>
 
       <div>
-        <h2 className='text-gray-600 whitespace-normal'>{Author}</h2> {/* Access Author */}
+        <h2 className='text-gray-600 whitespace-normal'>{author}</h2> {/* Access Author */}
       </div>
 
       <div>
@@ -39,7 +39,7 @@ Book.propTypes = {
       src: PropTypes.string,
       alt: PropTypes.string
     }),
-    Author: PropTypes.string,
+    author: PropTypes.string,
     title: PropTypes.string
   }).isRequired
 };

@@ -10,14 +10,25 @@ export default function SearchBar({ data }) {
     const handleFilter = (event) => {
         const searchBook = event.target.value;
         setWordInput(searchBook);
-        const newFiltr = data.filter((book) => {
+
+        const titleFiltr = data.filter((book) => {
             return book.title.toLowerCase().includes(searchBook.toLowerCase());
         });
 
-        if (searchBook === "")
+        const authFiltr = data.filter((book) => {
+            return book.author.toLowerCase().includes(searchBook.toLowerCase());
+        });
+
+        const genFiltr = data.filter((book) => {
+            return book.genre.toLowerCase().includes(searchBook.toLowerCase());
+        });
+
+        if (searchBook === "") {
             setFltrData([]);
-        else
-            setFltrData(newFiltr);
+        }else {
+            const filteredData = [...titleFiltr, ...authFiltr, ...genFiltr];
+            setFltrData(filteredData);
+        }
     }
 
     //clears the input on the search bar
@@ -78,6 +89,7 @@ export default function SearchBar({ data }) {
                         return (
                             <a className="dataItem text-lg hover:bg-gray-300 p-1" href="#" key={i}>
                                 <p>{book.title}</p>
+                                <p className="text-xs">{book.author} - {book.genre}</p>
                             </a>
                         );
                     })}
@@ -90,8 +102,8 @@ export default function SearchBar({ data }) {
 
 SearchBar.propTypes = {
     data: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      })
+        PropTypes.shape({
+            title: PropTypes.string.isRequired,
+        })
     ).isRequired,
-  };
+};

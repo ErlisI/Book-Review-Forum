@@ -25,6 +25,7 @@ export default {
     extend: {
       colors: {
         'type-of-red': '#FE4B53',
+        'type-of-purple': '#453a76',
       },
       
     },

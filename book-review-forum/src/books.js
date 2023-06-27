@@ -4,72 +4,81 @@ const books = [
             src: "https://m.media-amazon.com/images/I/51gJpbOQpHL.jpg",
             alt: "Atomic Habits - Book",
         },
-        Author: "James Clear",
+        author: "James Clear",
         title: "Atomic Habits",
+        genre: "Genre",
     },
     {
         image: {
             src: "https://m.media-amazon.com/images/I/81MtKRJ1HLL._AC_UY436_QL65_.jpg",
             alt: "Can't Hurt Me - Book",
         },
-        Author: "David Goggins",
+        author: "David Goggins",
         title: "Can't Hurt Me",
+        genre: "Genre",
     },
     {
         image: {
             src: "https://images-na.ssl-images-amazon.com/images/I/51YGx8qVVXL._AC_SX368_.jpg",
             alt: "Hello Beautiful - Book",
         },
-        Author: "Ann Napolitano",
+        author: "Ann Napolitano",
         title: "Hello Beautiful",
+        genre: "Genre",
     },
     {
         image: {
             src: "https://m.media-amazon.com/images/I/41Ej0vY9BoL.jpg",
             alt: "Pomegranate - Book",
         },
-        Author: "Helen Elaine Lee",
+        author: "Helen Elaine Lee",
         title: "Pomegranate",
+        genre: "Genre",
     },
     {
         image: {
             src: "https://m.media-amazon.com/images/I/518P8cxHRXL.jpg",
             alt: "Weyward - Book",
         },
-        Author: "Emilia Hart",
+        author: "Emilia Hart",
         title: "Weyward",
+        genre: "Genre",
     },
     {
         image: {
             src: "https://m.media-amazon.com/images/I/61CCadswT4L.jpg",
             alt: "The Science of Intelligent Decision Making - Book",
         },
-        Author: "Peter Hollins",
-        title: "The Science of Intelligent Decision Making The Science of Intelligent Decision Making",
+        author: "Peter Hollins",
+        title: "The Science of Intelligent Decision Making",
+        genre: "Genre",
     },
     {
         image: {
             src: "https://m.media-amazon.com/images/I/51D9E285XLL.jpg",
             alt: "The East Indian - Book",
         },
-        Author: "Brinda Charry ",
+        author: "Brinda Charry ",
         title: "The East Indian",
+        genre: "Genre",
     },
     {
         image: {
             src: "https://m.media-amazon.com/images/I/51GcCvYyKbL.jpg",
             alt: "Between Two Moons - Book",
         },
-        Author: "Aisha Abdel Gawad",
+        author: "Aisha Abdel Gawad",
         title: "Between Two Moons",
+        genre: "Genre",
     },
     {
         image: {
             src: "https://m.media-amazon.com/images/I/51q5irsID8L._SY346_.jpg",
             alt: "Loot - Book",
         },
-        Author: "Tania James",
+        author: "Tania James",
         title: "Loot",
+        genre: "Genre",
     },
 ];
 
