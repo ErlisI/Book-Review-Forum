@@ -23,7 +23,7 @@ export default function NavBar() {
                   <a href="index.html" className="block py-2 pl-3 pr-4 text-gray-50" aria-current="page">Home</a>
                 </li>
                 <li>
-                  <a href="#" className="block py-2 pl-3 pr-4 text-slate-300 hover:text-gray-50">Review</a>
+                  <a href="#" className="block py-2 pl-3 pr-4 text-slate-300 hover:text-gray-50">Reviews</a>
                 </li>
                 <li>
                   <a href="#" className="block py-2 pl-3 pr-4 text-slate-300 hover:text-gray-50">Saved</a>

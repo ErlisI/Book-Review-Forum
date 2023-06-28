@@ -12,20 +12,23 @@ export default function SearchBar({ data }) {
         setWordInput(searchBook);
 
         const titleFiltr = data.filter((book) => {
-            return book.title.toLowerCase().includes(searchBook.toLowerCase());
+            const searchWords = searchBook.toLowerCase().split(' ');
+            return searchWords.every((word) => book.title.toLowerCase().includes(word));
         });
 
         const authFiltr = data.filter((book) => {
-            return book.author.toLowerCase().includes(searchBook.toLowerCase());
+            const searchWords = searchBook.toLowerCase().split(' ');
+            return searchWords.every((word) => book.author.toLowerCase().includes(word));
         });
 
         const genFiltr = data.filter((book) => {
-            return book.genre.toLowerCase().includes(searchBook.toLowerCase());
+            const searchWords = searchBook.toLowerCase().split(' ');
+            return searchWords.every((word) => book.genre.toLowerCase().includes(word));
         });
 
         if (searchBook === "") {
             setFltrData([]);
-        }else {
+        } else {
             const filteredData = [...titleFiltr, ...authFiltr, ...genFiltr];
             setFltrData(filteredData);
         }
@@ -87,7 +90,7 @@ export default function SearchBar({ data }) {
                 <div className="dataResult text-justify grid rounded-lg overflow-hidden overflow-y-scroll absolute left-0 right-0  text-gray-800 bg-[#FEF9EF]">
                     {filtrData.slice(0.15).map((book, i) => {
                         return (
-                            <a className="dataItem text-lg hover:bg-gray-300 p-1" href="#" key={i}>
+                            <a className="dataItem text-lg hover:bg-gray-300 p-1" href="" key={i}>
                                 <p>{book.title}</p>
                                 <p className="text-xs">{book.author} - {book.genre}</p>
                             </a>

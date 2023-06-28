@@ -7,6 +7,8 @@ const books = [
         author: "James Clear",
         title: "Atomic Habits",
         genre: "Genre",
+        publisher: "Some publisher",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
         image: {
@@ -16,6 +18,8 @@ const books = [
         author: "David Goggins",
         title: "Can't Hurt Me",
         genre: "Genre",
+        publisher: "Some publisher",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
         image: {
@@ -25,6 +29,8 @@ const books = [
         author: "Ann Napolitano",
         title: "Hello Beautiful",
         genre: "Genre",
+        publisher: "Some publisher",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
         image: {
@@ -34,6 +40,8 @@ const books = [
         author: "Helen Elaine Lee",
         title: "Pomegranate",
         genre: "Genre",
+        publisher: "Some publisher",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
         image: {
@@ -43,6 +51,8 @@ const books = [
         author: "Emilia Hart",
         title: "Weyward",
         genre: "Genre",
+        publisher: "Some publisher",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
         image: {
@@ -52,6 +62,8 @@ const books = [
         author: "Peter Hollins",
         title: "The Science of Intelligent Decision Making",
         genre: "Genre",
+        publisher: "Some publisher",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
         image: {
@@ -61,6 +73,8 @@ const books = [
         author: "Brinda Charry ",
         title: "The East Indian",
         genre: "Genre",
+        publisher: "Some publisher",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
         image: {
@@ -70,6 +84,8 @@ const books = [
         author: "Aisha Abdel Gawad",
         title: "Between Two Moons",
         genre: "Genre",
+        publisher: "Some publisher",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
         image: {
@@ -79,6 +95,8 @@ const books = [
         author: "Tania James",
         title: "Loot",
         genre: "Genre",
+        publisher: "Some publisher",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
 ];
 
