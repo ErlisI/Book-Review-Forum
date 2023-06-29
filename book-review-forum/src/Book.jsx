@@ -8,18 +8,17 @@ export default function Book({ book }) {
   const [bookInfo, setBookInfo] = useState([]);
   const [isTrue, setTrue] = useState(false);
 
-  const handler = () => {
+  const handleBookPage = () => {
     setBookInfo(book);
     setTrue(true);
   }
-
 
   return (
     <>
       <div className='grid justify-items-center pb-14'>
 
         <div className='b-Image relative hover:-translate-y-1 hover:scale-105 duration-300'> {/* To Save the book */}
-          <a onClick={handler}>
+          <a onClick={handleBookPage}>
             <img className='object-contain h-80 mb-2' src={image.src} alt={image.alt} /> {/* Access image properties */}
             <div className='overlay'></div>
           </a>

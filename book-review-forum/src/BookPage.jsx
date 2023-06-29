@@ -1,8 +1,10 @@
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import ModalForm from "./UI/Modal";
 import PropTypes from 'prop-types';
+import Review from "./Review";
+import ModalForm from './UI/ModalForm';
 import { useState } from "react";
+import ReviewForm from "./ReviewForm";
 
 export default function BookPage({ book }) {
 
@@ -13,14 +15,24 @@ export default function BookPage({ book }) {
     genre,
     publisher,
     desc,
-
+    reviews: [{ name, rating, comment }]
   } = book
 
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const visibleTrue = () => {
+  const showModal = () => {
     setIsModalVisible(true);
-  }
+  };
+
+  const hideModal = () => {
+    setIsModalVisible(false);
+  };
+
+  const onAddReview = () => {
+    // modal should close
+    hideModal();
+    // new reviews should be added to the DOM
+  };
 
   return (
     <>
@@ -55,12 +67,6 @@ export default function BookPage({ book }) {
             <h2 className='text-3xl text-gray-50'>{author}</h2> {/* Access Author */}
             <h1 className='text-6xl text-type-of-red'>{title}</h1> {/* Access title */}
 
-            {!isModalVisible ? (
-            <button onClick={visibleTrue} className="mt-4 bg-transparent text-gray-50 font-semibold py-2 px-4 border hover:bg-gray-50 hover:text-type-of-red border-gray-50 rounded">
-              Write A Review
-            </button>
-            ) : (console.log("hello")
-            )}
           </div>
 
           <div className='w-4/12 mx-auto whitespace-normal text-center text-gray-50 max-w-full'>
@@ -70,7 +76,28 @@ export default function BookPage({ book }) {
         </div>
       </div>
 
-      <ModalForm isVisible={isModalVisible} />
+      <div className="antialiased mx-auto max-w-screen-sm mt-16">
+        <div className='text-center'>
+          <h3 className="mb-4 text-4xl font-semibold text-gray-900">Reviews</h3>
+
+          <button onClick={showModal} className="bg-transparent hover:bg-type-of-purple text-gray-900 font-semibold hover:text-gray-50 mb-10 py-2 px-4 border border-gray-900 hover:border-transparent rounded">
+            Write a Review
+          </button>
+        </div>
+
+        <ModalForm isVisible={isModalVisible} hideModal={hideModal}>
+          <ReviewForm addReview={onAddReview} />
+        </ModalForm>
+
+        <Review
+          review={{
+            name: name,
+            rating: rating,
+            comment: comment,
+          }}
+        />
+
+      </div>
 
       <Footer />
 
@@ -78,6 +105,7 @@ export default function BookPage({ book }) {
   );
 }
 
+// Prop types validation
 BookPage.propTypes = {
   book: PropTypes.shape({
     image: PropTypes.shape({
@@ -89,5 +117,10 @@ BookPage.propTypes = {
     genre: PropTypes.string.isRequired,
     publisher: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
+    reviews: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      rating: PropTypes.number.isRequired,
+      comment: PropTypes.string.isRequired,
+    }).isRequired,
   }).isRequired,
 };

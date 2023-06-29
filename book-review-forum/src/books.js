@@ -8,7 +8,17 @@ const books = [
         title: "Atomic Habits",
         genre: "Genre",
         publisher: "Some publisher",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
+        reviews: [{
+            name: "John Doe",
+            email: "jDoe@gmail.com",
+            rating: 4,
+            comment: "Very good Book",
+            img: {
+                src: "",
+                alt: ""
+            }
+        }]
     },
     {
         image: {
@@ -19,7 +29,17 @@ const books = [
         title: "Can't Hurt Me",
         genre: "Genre",
         publisher: "Some publisher",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
+        reviews: [{
+            name: "John Doe",
+            email: "jDoe@gmail.com",
+            rating: 4,
+            comment: "Very good Book",
+            img: {
+                src: "",
+                alt: ""
+            }
+        }]
     },
     {
         image: {
@@ -30,7 +50,17 @@ const books = [
         title: "Hello Beautiful",
         genre: "Genre",
         publisher: "Some publisher",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
+        reviews: [{
+            name: "John Doe",
+            email: "jDoe@gmail.com",
+            rating: 4,
+            comment: "Very good Book",
+            img: {
+                src: "",
+                alt: ""
+            }
+        }]
     },
     {
         image: {
@@ -41,7 +71,17 @@ const books = [
         title: "Pomegranate",
         genre: "Genre",
         publisher: "Some publisher",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
+        reviews: [{
+            name: "John Doe",
+            email: "jDoe@gmail.com",
+            rating: 4,
+            comment: "Very good Book",
+            img: {
+                src: "",
+                alt: ""
+            }
+        }]
     },
     {
         image: {
@@ -52,7 +92,17 @@ const books = [
         title: "Weyward",
         genre: "Genre",
         publisher: "Some publisher",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
+        reviews: [{
+            name: "John Doe",
+            email: "jDoe@gmail.com",
+            rating: 4,
+            comment: "Very good Book",
+            img: {
+                src: "",
+                alt: ""
+            }
+        }]
     },
     {
         image: {
@@ -63,7 +113,17 @@ const books = [
         title: "The Science of Intelligent Decision Making",
         genre: "Genre",
         publisher: "Some publisher",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
+        reviews: [{
+            name: "John Doe",
+            email: "jDoe@gmail.com",
+            rating: 4,
+            comment: "Very good Book",
+            img: {
+                src: "",
+                alt: ""
+            }
+        }]
     },
     {
         image: {
@@ -74,7 +134,17 @@ const books = [
         title: "The East Indian",
         genre: "Genre",
         publisher: "Some publisher",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
+        reviews: [{
+            name: "John Doe",
+            email: "jDoe@gmail.com",
+            rating: 4,
+            comment: "Very good Book",
+            img: {
+                src: "",
+                alt: ""
+            }
+        }]
     },
     {
         image: {
@@ -85,7 +155,17 @@ const books = [
         title: "Between Two Moons",
         genre: "Genre",
         publisher: "Some publisher",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
+        reviews: [{
+            name: "John Doe",
+            email: "jDoe@gmail.com",
+            rating: 4,
+            comment: "Very good Book",
+            img: {
+                src: "",
+                alt: ""
+            }
+        }]
     },
     {
         image: {
@@ -96,7 +176,17 @@ const books = [
         title: "Loot",
         genre: "Genre",
         publisher: "Some publisher",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
+        reviews: [{
+            name: "John Doe",
+            email: "jDoe@gmail.com",
+            rating: 4,
+            comment: "Very good Book",
+            img: {
+                src: "",
+                alt: ""
+            }
+        }]
     },
 ];
 
