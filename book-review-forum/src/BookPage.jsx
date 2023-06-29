@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import PropTypes from 'prop-types';
 import Review from "./Review";
 import ModalForm from './UI/ModalForm';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReviewForm from "./ReviewForm";
 
 export default function BookPage({ book }) {
@@ -18,6 +18,7 @@ export default function BookPage({ book }) {
     reviews: [{ name, rating, comment }]
   } = book
 
+  const [books, setBooks] = useState([]);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
@@ -28,11 +29,28 @@ export default function BookPage({ book }) {
     setIsModalVisible(false);
   };
 
-  const onAddReview = () => {
+  const onAddReview = (newReview) => {
     // modal should close
     hideModal();
     // new reviews should be added to the DOM
+    setBooks((reviews) => {
+      return [...reviews, newReview];
+    });
   };
+
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        hideModal();
+      }
+    };
+    console.log("adding event listener");
+    window.addEventListener("keydown", handleEscape);
+    return () => {
+      console.log("removing event listener");
+      window.removeEventListener("keydown", handleEscape);
+    };
+  });
 
   return (
     <>
@@ -86,7 +104,7 @@ export default function BookPage({ book }) {
         </div>
 
         <ModalForm isVisible={isModalVisible} hideModal={hideModal}>
-          <ReviewForm addReview={onAddReview} />
+          <ReviewForm addReview={onAddReview} hideModal={hideModal}/>
         </ModalForm>
 
         <Review

@@ -1,7 +1,30 @@
+import { useState, useEffect } from 'react';
 import Book from './Book';
-import books from './books';
+//import books from './books';
 
 export default function SectionTwo() {
+
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    let ignore = false;
+    async function fetchBooks() {
+      const response = await fetch('http://localhost:3000/books');
+      const book = await response.json();
+      console.log(book)
+      if (!ignore) {
+        setBooks(book);
+      }
+      return book;
+    }
+
+    fetchBooks();
+
+    return () => {
+      ignore = true;
+    }
+  }, []);
+
   const bookLayout = books.map((book, i) => {
     return <Book book={book} key={i} />;
   });

@@ -1,6 +1,117 @@
 {
+  "reviews": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "name": "John Doe",
+      "email": "jDoe@gmail.com",
+      "rating": 4,
+      "comment": "Very good Book",
+      "img": {
+        "src": "",
+        "alt": ""
+      }
+    },
+    {
+      "id": 2,
+      "bookId": 2,
+      "name": "John Doe",
+      "email": "jDoe@gmail.com",
+      "rating": 4,
+      "comment": "Very good Book",
+      "img": {
+        "src": "",
+        "alt": ""
+      }
+    },
+    {
+      "id": 3,
+      "bookId": 3,
+      "name": "John Doe",
+      "email": "jDoe@gmail.com",
+      "rating": 4,
+      "comment": "Very good Book",
+      "img": {
+        "src": "",
+        "alt": ""
+      }
+    },
+    {
+      "id": 4,
+      "bookId": 4,
+      "name": "John Doe",
+      "email": "jDoe@gmail.com",
+      "rating": 4,
+      "comment": "Very good Book",
+      "img": {
+        "src": "",
+        "alt": ""
+      }
+    },
+    {
+      "id": 5,
+      "bookId": 5,
+      "name": "John Doe",
+      "email": "jDoe@gmail.com",
+      "rating": 4,
+      "comment": "Very good Book",
+      "img": {
+        "src": "",
+        "alt": ""
+      }
+    },
+    {
+      "id": 6,
+      "bookId": 6,
+      "name": "John Doe",
+      "email": "jDoe@gmail.com",
+      "rating": 4,
+      "comment": "Very good Book",
+      "img": {
+        "src": "",
+        "alt": ""
+      }
+    },
+    {
+      "id": 7,
+      "bookId": 7,
+      "name": "John Doe",
+      "email": "jDoe@gmail.com",
+      "rating": 4,
+      "comment": "Very good Book",
+      "img": {
+        "src": "",
+        "alt": ""
+      }
+    },
+    {
+      "id": 8,
+      "bookId": 8,
+      "name": "John Doe",
+      "email": "jDoe@gmail.com",
+      "rating": 4,
+      "comment": "Very good Book",
+      "img": {
+        "src": "",
+        "alt": ""
+      }
+    },
+    {
+      "id": 9,
+      "bookId": 9,
+      "name": "John Doe",
+      "email": "jDoe@gmail.com",
+      "rating": 4,
+      "comment": "Very good Book",
+      "img": {
+        "src": "",
+        "alt": ""
+      }
+    }
+  ],
   "books": [
     {
+      "id": 1,
       "image": {
         "src": "https://m.media-amazon.com/images/I/51gJpbOQpHL.jpg",
         "alt": "Atomic Habits - Book"
@@ -9,21 +120,10 @@
       "title": "Atomic Habits",
       "genre": "Genre",
       "publisher": "Some publisher",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
-      "reviews": [
-        {
-          "name": "John Doe",
-          "email": "jDoe@gmail.com",
-          "rating": 4,
-          "comment": "Very good Book",
-          "img": {
-            "src": "",
-            "alt": ""
-          }
-        }
-      ]
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
+      "id": 2,
       "image": {
         "src": "https://m.media-amazon.com/images/I/81MtKRJ1HLL._AC_UY436_QL65_.jpg",
         "alt": "Can't Hurt Me - Book"
@@ -47,6 +147,7 @@
       ]
     },
     {
+      "id": 3,
       "image": {
         "src": "https://images-na.ssl-images-amazon.com/images/I/51YGx8qVVXL._AC_SX368_.jpg",
         "alt": "Hello Beautiful - Book"
@@ -70,6 +171,7 @@
       ]
     },
     {
+      "id": 4,
       "image": {
         "src": "https://m.media-amazon.com/images/I/41Ej0vY9BoL.jpg",
         "alt": "Pomegranate - Book"
@@ -93,6 +195,7 @@
       ]
     },
     {
+      "id": 5,
       "image": {
         "src": "https://m.media-amazon.com/images/I/518P8cxHRXL.jpg",
         "alt": "Weyward - Book"
@@ -116,6 +219,7 @@
       ]
     },
     {
+      "id": 6,
       "image": {
         "src": "https://m.media-amazon.com/images/I/61CCadswT4L.jpg",
         "alt": "The Science of Intelligent Decision Making - Book"
@@ -139,6 +243,7 @@
       ]
     },
     {
+      "id": 7,
       "image": {
         "src": "https://m.media-amazon.com/images/I/51D9E285XLL.jpg",
         "alt": "The East Indian - Book"
@@ -162,6 +267,7 @@
       ]
     },
     {
+      "id": 8,
       "image": {
         "src": "https://m.media-amazon.com/images/I/51GcCvYyKbL.jpg",
         "alt": "Between Two Moons - Book"
@@ -185,6 +291,7 @@
       ]
     },
     {
+      "id": 9,
       "image": {
         "src": "https://m.media-amazon.com/images/I/51q5irsID8L._SY346_.jpg",
         "alt": "Loot - Book"
@@ -206,6 +313,13 @@
           }
         }
       ]
+    },
+    {
+      "name": "iehfeq",
+      "rating": "",
+      "email": "weq@g.com",
+      "comment": "isugfiusdfj",
+      "id": 10
     }
   ]
 }

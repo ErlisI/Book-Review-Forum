@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useState } from "react";
 
 const initialReviewFormState = {
     name: "",
@@ -8,7 +8,7 @@ const initialReviewFormState = {
     comment: "",
 };
 
-export default function ReviewForm({ onAddReview }) {
+export default function ReviewForm({ onAddReview, hideModal }) {
 
     const [reviewFormState, setReviewFormState] = useState(initialReviewFormState);
 
@@ -19,11 +19,29 @@ export default function ReviewForm({ onAddReview }) {
         }));
     };
 
-    const handleAddReviewFormSubmit = (e) => {
+    const handleAddReviewFormSubmit = async (e) => {
         e.preventDefault();
-        onAddReview(reviewFormState); // Pass the reviewFormState as an argument to onAddReview function
         setReviewFormState(initialReviewFormState); // Reset the form after submission if needed
+        hideModal();
+
+        const preparedJob = {
+            ...reviewFormState,
+          };
+
+        const response = await fetch("http://localhost:3000/books", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(preparedJob),
+        });
+        console.log('response', response);
+        const savedReview = await response.json();
+        console.log('Saved Review', savedReview);
+        onAddReview(savedReview);
     };
+
+
 
     return (
         <div className="container mx-auto md:px-3">
@@ -81,4 +99,5 @@ export default function ReviewForm({ onAddReview }) {
 
 ReviewForm.propTypes = {
     onAddReview: PropTypes.func.isRequired,
+    hideModal: PropTypes.func.isRequired
 };
