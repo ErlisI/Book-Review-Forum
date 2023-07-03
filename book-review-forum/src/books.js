@@ -10,7 +10,7 @@ const books = [
         publisher: "Some publisher",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
         reviews: [{
-            name: "John Doe",
+            name: "John Hi",
             email: "jDoe@gmail.com",
             rating: 4,
             comment: "Very good Book",

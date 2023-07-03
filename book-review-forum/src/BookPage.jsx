@@ -15,10 +15,10 @@ export default function BookPage({ book }) {
     genre,
     publisher,
     desc,
-    reviews: [{ name, rating, comment }]
+    reviews: [{ name, rating, comment, bookId }]
   } = book
-
-  const [books, setBooks] = useState([]);
+  // eslint-disable-next-line no-unused-vars
+  const [reviews, setReviews] = useState([]);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
@@ -30,12 +30,8 @@ export default function BookPage({ book }) {
   };
 
   const onAddReview = (newReview) => {
-    // modal should close
     hideModal();
-    // new reviews should be added to the DOM
-    setBooks((reviews) => {
-      return [...reviews, newReview];
-    });
+    setReviews((prevReviews) => [...prevReviews, newReview]);
   };
 
   useEffect(() => {
@@ -51,6 +47,8 @@ export default function BookPage({ book }) {
       window.removeEventListener("keydown", handleEscape);
     };
   });
+
+  console.log(name);
 
   return (
     <>
@@ -104,7 +102,7 @@ export default function BookPage({ book }) {
         </div>
 
         <ModalForm isVisible={isModalVisible} hideModal={hideModal}>
-          <ReviewForm addReview={onAddReview} hideModal={hideModal}/>
+          <ReviewForm addReview={onAddReview} hideModal={hideModal} bookId={bookId} />
         </ModalForm>
 
         <Review

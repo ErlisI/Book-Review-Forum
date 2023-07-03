@@ -3,7 +3,7 @@
     {
       "id": 1,
       "bookId": 1,
-      "name": "John Doe",
+      "name": "John HELLO",
       "email": "jDoe@gmail.com",
       "rating": 4,
       "comment": "Very good Book",
@@ -109,6 +109,7 @@
       }
     }
   ],
+  
   "books": [
     {
       "id": 1,
@@ -132,19 +133,7 @@
       "title": "Can't Hurt Me",
       "genre": "Genre",
       "publisher": "Some publisher",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
-      "reviews": [
-        {
-          "name": "John Doe",
-          "email": "jDoe@gmail.com",
-          "rating": 4,
-          "comment": "Very good Book",
-          "img": {
-            "src": "",
-            "alt": ""
-          }
-        }
-      ]
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
       "id": 3,
@@ -156,19 +145,7 @@
       "title": "Hello Beautiful",
       "genre": "Genre",
       "publisher": "Some publisher",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
-      "reviews": [
-        {
-          "name": "John Doe",
-          "email": "jDoe@gmail.com",
-          "rating": 4,
-          "comment": "Very good Book",
-          "img": {
-            "src": "",
-            "alt": ""
-          }
-        }
-      ]
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
       "id": 4,
@@ -180,19 +157,7 @@
       "title": "Pomegranate",
       "genre": "Genre",
       "publisher": "Some publisher",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
-      "reviews": [
-        {
-          "name": "John Doe",
-          "email": "jDoe@gmail.com",
-          "rating": 4,
-          "comment": "Very good Book",
-          "img": {
-            "src": "",
-            "alt": ""
-          }
-        }
-      ]
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
       "id": 5,
@@ -204,19 +169,7 @@
       "title": "Weyward",
       "genre": "Genre",
       "publisher": "Some publisher",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
-      "reviews": [
-        {
-          "name": "John Doe",
-          "email": "jDoe@gmail.com",
-          "rating": 4,
-          "comment": "Very good Book",
-          "img": {
-            "src": "",
-            "alt": ""
-          }
-        }
-      ]
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
       "id": 6,
@@ -228,19 +181,7 @@
       "title": "The Science of Intelligent Decision Making",
       "genre": "Genre",
       "publisher": "Some publisher",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
-      "reviews": [
-        {
-          "name": "John Doe",
-          "email": "jDoe@gmail.com",
-          "rating": 4,
-          "comment": "Very good Book",
-          "img": {
-            "src": "",
-            "alt": ""
-          }
-        }
-      ]
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
       "id": 7,
@@ -252,19 +193,7 @@
       "title": "The East Indian",
       "genre": "Genre",
       "publisher": "Some publisher",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
-      "reviews": [
-        {
-          "name": "John Doe",
-          "email": "jDoe@gmail.com",
-          "rating": 4,
-          "comment": "Very good Book",
-          "img": {
-            "src": "",
-            "alt": ""
-          }
-        }
-      ]
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
       "id": 8,
@@ -276,19 +205,7 @@
       "title": "Between Two Moons",
       "genre": "Genre",
       "publisher": "Some publisher",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
-      "reviews": [
-        {
-          "name": "John Doe",
-          "email": "jDoe@gmail.com",
-          "rating": 4,
-          "comment": "Very good Book",
-          "img": {
-            "src": "",
-            "alt": ""
-          }
-        }
-      ]
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     },
     {
       "id": 9,
@@ -300,26 +217,7 @@
       "title": "Loot",
       "genre": "Genre",
       "publisher": "Some publisher",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo.",
-      "reviews": [
-        {
-          "name": "John Doe",
-          "email": "jDoe@gmail.com",
-          "rating": 4,
-          "comment": "Very good Book",
-          "img": {
-            "src": "",
-            "alt": ""
-          }
-        }
-      ]
-    },
-    {
-      "name": "iehfeq",
-      "rating": "",
-      "email": "weq@g.com",
-      "comment": "isugfiusdfj",
-      "id": 10
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repellendus expedita, magnam nam odit et exercitationem. A possimus provident architecto necessitatibus non, reiciendis doloremque, sed nam quibusdam ratione molestias quo."
     }
   ]
 }

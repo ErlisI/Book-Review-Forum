@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Book from './Book';
-//import books from './books';
 
 export default function SectionTwo() {
 

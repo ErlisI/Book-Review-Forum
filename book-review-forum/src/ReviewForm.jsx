@@ -8,7 +8,7 @@ const initialReviewFormState = {
     comment: "",
 };
 
-export default function ReviewForm({ onAddReview, hideModal }) {
+export default function ReviewForm({ onAddReview, hideModal, bookId }) {
 
     const [reviewFormState, setReviewFormState] = useState(initialReviewFormState);
 
@@ -21,27 +21,32 @@ export default function ReviewForm({ onAddReview, hideModal }) {
 
     const handleAddReviewFormSubmit = async (e) => {
         e.preventDefault();
-        setReviewFormState(initialReviewFormState); // Reset the form after submission if needed
+        setReviewFormState(initialReviewFormState);
         hideModal();
 
-        const preparedJob = {
+        const preparedReview = {
             ...reviewFormState,
-          };
+            bookId: bookId, // Use the bookId value directly
+            img: {
+                src: "", // Provide the image source
+                alt: "", // Provide the image alt text
+            },
+        };
 
-        const response = await fetch("http://localhost:3000/books", {
+        const response = await fetch("http://localhost:3000/reviews", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(preparedJob),
+            body: JSON.stringify(preparedReview),
         });
-        console.log('response', response);
         const savedReview = await response.json();
         console.log('Saved Review', savedReview);
+
         onAddReview(savedReview);
     };
 
-
+    console.log(bookId);
 
     return (
         <div className="container mx-auto md:px-3">
@@ -99,5 +104,6 @@ export default function ReviewForm({ onAddReview, hideModal }) {
 
 ReviewForm.propTypes = {
     onAddReview: PropTypes.func.isRequired,
-    hideModal: PropTypes.func.isRequired
+    hideModal: PropTypes.func.isRequired,
+    bookId: PropTypes.func.isRequired
 };

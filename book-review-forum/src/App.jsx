@@ -5,12 +5,31 @@ import Footer from './Footer';
 import './App.css'
 
 import BookPage from './BookPage';
-import books from './books';
+import { useState, useEffect } from 'react';
 
 function App() {
-  // console.log(books);
-  // const [books, setBooks] = useState(books)
-  // Pass the reviews down to the review related component
+
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    let ignore = false;
+    async function fetchBooks() {
+      const response = await fetch('http://localhost:3000/books');
+      const book = await response.json();
+      console.log(book)
+      if (!ignore) {
+        setBooks(book);
+      }
+      return book;
+    }
+
+    fetchBooks();
+
+    return () => {
+      ignore = true;
+    }
+  }, []);
+
 
   return (
     <>
@@ -18,7 +37,7 @@ function App() {
       <SectionOne />
       <SectionTwo />
       <Footer /> 
-      <BookPage book={books[0]} />
+      <BookPage book={books} />
     </>
   );
 }
