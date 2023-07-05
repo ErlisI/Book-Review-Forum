@@ -3,12 +3,12 @@ import { useState } from "react";
 
 const initialReviewFormState = {
     name: "",
-    rating: "",
+    rating: 0,
     email: "",
     comment: "",
 };
 
-export default function ReviewForm({ onAddReview, hideModal, bookId }) {
+export default function ReviewForm({ hideModal, bookId }) {
 
     const [reviewFormState, setReviewFormState] = useState(initialReviewFormState);
 
@@ -42,11 +42,7 @@ export default function ReviewForm({ onAddReview, hideModal, bookId }) {
         });
         const savedReview = await response.json();
         console.log('Saved Review', savedReview);
-
-        onAddReview(savedReview);
     };
-
-    console.log(bookId);
 
     return (
         <div className="container mx-auto md:px-3">
@@ -65,6 +61,7 @@ export default function ReviewForm({ onAddReview, hideModal, bookId }) {
                                 required
                             />
                         </div>
+
                         <div>
                             <input
                                 onChange={handleInputChange}
@@ -77,6 +74,22 @@ export default function ReviewForm({ onAddReview, hideModal, bookId }) {
                                 required
                             />
                         </div>
+
+                        <div>
+                            <input
+                                onChange={handleInputChange}
+                                value={reviewFormState.rating}
+                                type="number"
+                                name="rating" // Add the name attribute to identify the input
+                                id="rating"
+                                className="my-4 shadow-sm w-full p-3 border text-center border-gray-700 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block"
+                                placeholder="Rating"
+                                min="0"
+                                max="5"
+                                required
+                            />
+                        </div>
+
                         <div className="sm:col-span-2">
                             <textarea
                                 onChange={handleInputChange}
@@ -89,6 +102,7 @@ export default function ReviewForm({ onAddReview, hideModal, bookId }) {
                                 required
                             />
                         </div>
+
                         <button
                             type="submit"
                             data-te-ripple-init

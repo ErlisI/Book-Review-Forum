@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from 'prop-types';
-import BookPage from "./BookPage";
+import BookPage from "./routes/BookPage";
 
 export default function SearchBar({ data }) {
 

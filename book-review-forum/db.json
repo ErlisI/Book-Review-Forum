@@ -17,7 +17,7 @@
       "bookId": 2,
       "name": "John Doe",
       "email": "jDoe@gmail.com",
-      "rating": 4,
+      "rating": 2,
       "comment": "Very good Book",
       "img": {
         "src": "",
@@ -107,9 +107,44 @@
         "src": "",
         "alt": ""
       }
+    },
+    {
+      "id": 9,
+      "bookId": 2,
+      "name": "John HELLO",
+      "email": "jHello@gmail.com",
+      "rating": 5,
+      "comment": "Very good Book",
+      "img": {
+        "src": "",
+        "alt": ""
+      }
+    },
+    {
+      "name": "sfd",
+      "rating": "2",
+      "email": "sdf@g.com",
+      "comment": "asdsdfa",
+      "bookId": 2,
+      "img": {
+        "src": "",
+        "alt": ""
+      },
+      "id": 10
+    },
+    {
+      "name": "hello",
+      "rating": "3",
+      "email": "sjbd@gmail.com",
+      "comment": "hjshdcjlkasndck nsdkc",
+      "bookId": 1,
+      "img": {
+        "src": "",
+        "alt": ""
+      },
+      "id": 11
     }
   ],
-  
   "books": [
     {
       "id": 1,

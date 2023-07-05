@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import books from './books';
 
@@ -20,7 +21,7 @@ export default function NavBar() {
             <div className="hidden w-full md:block md:w-auto" id="navbar-default">
               <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
                 <li>
-                  <a href="index.html" className="block py-2 pl-3 pr-4 text-gray-50" aria-current="page">Home</a>
+                  <Link to={`/`} className="block py-2 pl-3 pr-4 text-gray-50" aria-current="page">Home</Link>
                 </li>
                 <li>
                   <a href="#" className="block py-2 pl-3 pr-4 text-slate-300 hover:text-gray-50">Reviews</a>

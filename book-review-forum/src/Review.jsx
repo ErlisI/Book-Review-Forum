@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 
 export default function Review({ review }) {
 
-    const { name, rating, comment } = review;
+    // eslint-disable-next-line react/prop-types
+    const { name, rating, comment, img: { src, alt } } = review;
 
     return (
         <div className="antialiased mx-auto max-w-screen-sm mb-16 mt-5">
@@ -11,7 +12,7 @@ export default function Review({ review }) {
 
                 <div className="flex">
                     <div className="flex-shrink-0 mr-3">
-                        <img className="mt-2 rounded-full w-8 h-8 sm:w-10 sm:h-10" src="https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt=""></img>
+                        <img className="mt-2 rounded-full w-8 h-8 sm:w-10 sm:h-10" src={src} alt={alt}></img>
                     </div>
                     <div className="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
                         <div className='flex pb-5'>
@@ -54,6 +55,10 @@ Review.propTypes = {
             name: PropTypes.string.isRequired,
             rating: PropTypes.number.isRequired,
             comment: PropTypes.string.isRequired,
+            img: PropTypes.shape({
+                src: PropTypes.string.isRequired,
+                alt: PropTypes.string.isRequired,
+            }).isRequired,
         })
     ).isRequired,
-};
+};  

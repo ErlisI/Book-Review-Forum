@@ -1,12 +1,25 @@
-import NavBar from "./NavBar";
-import Footer from "./Footer";
+import NavBar from "../NavBar";
+import Footer from "../Footer";
 import PropTypes from 'prop-types';
-import Review from "./Review";
-import ModalForm from './UI/ModalForm';
+import Review from "../Review";
+import ModalForm from '../UI/ModalForm';
 import { useState, useEffect } from "react";
-import ReviewForm from "./ReviewForm";
+import ReviewForm from "../ReviewForm";
+import { useLoaderData } from "react-router-dom";
 
-export default function BookPage({ book }) {
+// eslint-disable-next-line react-refresh/only-export-components
+export async function loader({ params }) {
+  const responseBook = await fetch(`http://localhost:3000/books/${params.id}`);
+  const book = await responseBook.json();
+
+  const responseReview = await fetch(`http://localhost:3000/reviews?bookId=${params.id}`);
+  const reviews = await responseReview.json();
+  return { book, reviews };
+}
+
+export default function BookPage() {
+
+  const { book, reviews } = useLoaderData();
 
   const {
     image: { src, alt },
@@ -15,10 +28,10 @@ export default function BookPage({ book }) {
     genre,
     publisher,
     desc,
-    reviews: [{ name, rating, comment, bookId }]
-  } = book
+    id
+  } = book;
+
   // eslint-disable-next-line no-unused-vars
-  const [reviews, setReviews] = useState([]);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
@@ -27,11 +40,6 @@ export default function BookPage({ book }) {
 
   const hideModal = () => {
     setIsModalVisible(false);
-  };
-
-  const onAddReview = (newReview) => {
-    hideModal();
-    setReviews((prevReviews) => [...prevReviews, newReview]);
   };
 
   useEffect(() => {
@@ -48,11 +56,14 @@ export default function BookPage({ book }) {
     };
   });
 
-  console.log(name);
+  const reviewsLayout = reviews.map((review, i) => {
+    return <Review review={review} key={i} />;
+  });
 
   return (
     <>
       <NavBar />
+
       <div className="bg-type-of-purple pt-32 pb-20">
         <div className="flex mb-40">
           <div className="flex">
@@ -101,17 +112,14 @@ export default function BookPage({ book }) {
           </button>
         </div>
 
+        {/* use navigate to use outlet */}
         <ModalForm isVisible={isModalVisible} hideModal={hideModal}>
-          <ReviewForm addReview={onAddReview} hideModal={hideModal} bookId={bookId} />
+          <ReviewForm hideModal={hideModal} bookId={id} />
         </ModalForm>
+        
+        {reviewsLayout}
 
-        <Review
-          review={{
-            name: name,
-            rating: rating,
-            comment: comment,
-          }}
-        />
+        {/* remove review */}
 
       </div>
 
@@ -133,10 +141,13 @@ BookPage.propTypes = {
     genre: PropTypes.string.isRequired,
     publisher: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
-    reviews: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      rating: PropTypes.number.isRequired,
-      comment: PropTypes.string.isRequired,
-    }).isRequired,
+    reviews: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        rating: PropTypes.number.isRequired,
+        comment: PropTypes.string.isRequired,
+        bookId: PropTypes.string.isRequired,
+      })
+    ).isRequired,
   }).isRequired,
 };
