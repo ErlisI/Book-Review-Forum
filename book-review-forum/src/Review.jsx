@@ -1,9 +1,24 @@
 import PropTypes from 'prop-types';
+import deleteReview from './deleteReview';
 
 export default function Review({ review }) {
 
     // eslint-disable-next-line react/prop-types
     const { name, rating, comment, img: { src, alt } } = review;
+
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleDateString();
+
+    const handleDeleteReview = async () => {
+        try {
+            await deleteReview({ params: review.id });
+            window.location.reload();
+            console.log('Review deleted successfully.');
+
+        } catch (error) {
+            console.log('Failed to delete the review:', error.message);
+        }
+    };
 
     return (
         <div className="antialiased mx-auto max-w-screen-sm mb-16 mt-5">
@@ -16,7 +31,7 @@ export default function Review({ review }) {
                     </div>
                     <div className="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
                         <div className='flex pb-5'>
-                            <strong className='text-lg'>{name}</strong> <span className="text-gray-400 text-sm pl-5 pt-1">mm/dd/yyyy</span>
+                            <strong className='text-lg'>{name}</strong> <span className="text-gray-400 text-sm pl-5 pt-1">{formattedDate}</span>
 
                             <div className="flex justify-center ml-auto">
                                 {Array.from({ length: 5 }, (_, index) => (
@@ -42,6 +57,9 @@ export default function Review({ review }) {
                         <p className="text-sm">
                             {comment}
                         </p>
+                        <button className="text-red-500 hover:text-red-700" onClick={handleDeleteReview}>
+                            Delete Review
+                        </button>
                     </div>
                 </div>
             </div>

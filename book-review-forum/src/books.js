@@ -1,5 +1,6 @@
 const books = [
     {
+        id: 1,
         image: {
             src: "https://m.media-amazon.com/images/I/51gJpbOQpHL.jpg",
             alt: "Atomic Habits - Book",
@@ -21,6 +22,7 @@ const books = [
         }]
     },
     {
+        id: 2,
         image: {
             src: "https://m.media-amazon.com/images/I/81MtKRJ1HLL._AC_UY436_QL65_.jpg",
             alt: "Can't Hurt Me - Book",
@@ -42,6 +44,7 @@ const books = [
         }]
     },
     {
+        id: 3,
         image: {
             src: "https://images-na.ssl-images-amazon.com/images/I/51YGx8qVVXL._AC_SX368_.jpg",
             alt: "Hello Beautiful - Book",
@@ -63,6 +66,7 @@ const books = [
         }]
     },
     {
+        id: 4,
         image: {
             src: "https://m.media-amazon.com/images/I/41Ej0vY9BoL.jpg",
             alt: "Pomegranate - Book",
@@ -84,6 +88,7 @@ const books = [
         }]
     },
     {
+        id: 5,
         image: {
             src: "https://m.media-amazon.com/images/I/518P8cxHRXL.jpg",
             alt: "Weyward - Book",
@@ -105,6 +110,7 @@ const books = [
         }]
     },
     {
+        id: 6,
         image: {
             src: "https://m.media-amazon.com/images/I/61CCadswT4L.jpg",
             alt: "The Science of Intelligent Decision Making - Book",
@@ -126,6 +132,7 @@ const books = [
         }]
     },
     {
+        id: 7,
         image: {
             src: "https://m.media-amazon.com/images/I/51D9E285XLL.jpg",
             alt: "The East Indian - Book",
@@ -147,6 +154,7 @@ const books = [
         }]
     },
     {
+        id: 8,
         image: {
             src: "https://m.media-amazon.com/images/I/51GcCvYyKbL.jpg",
             alt: "Between Two Moons - Book",
@@ -168,6 +176,7 @@ const books = [
         }]
     },
     {
+        id: 9,
         image: {
             src: "https://m.media-amazon.com/images/I/51q5irsID8L._SY346_.jpg",
             alt: "Loot - Book",

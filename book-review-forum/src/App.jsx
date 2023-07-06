@@ -1,7 +1,5 @@
-import NavBar from './NavBar';
 import SectionOne from './SectionOne';
 import SectionTwo from './SectionTwo';
-import Footer from './Footer';
 import './App.css'
 
 // import BookPage from './BookPage';

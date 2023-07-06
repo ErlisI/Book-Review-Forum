@@ -1,16 +1,9 @@
 import { useState } from "react";
 import PropTypes from 'prop-types';
-import BookPage from "./routes/BookPage";
+import { Link } from "react-router-dom";
+//import BookPage from "./routes/BookPage";
 
 export default function SearchBar({ data }) {
-
-    const [bookInfo, setBookInfo] = useState([]);
-    const [isTrue, setTrue] = useState(false);
-
-    const handleBookPage = () => {
-        setBookInfo(data);
-        setTrue(true);
-    }
 
     const [filtrData, setFltrData] = useState([]);
     const [wordInput, setWordInput] = useState("");
@@ -22,6 +15,7 @@ export default function SearchBar({ data }) {
 
         const titleFiltr = data.filter((book) => {
             const searchWords = searchBook.toLowerCase().split(' ');
+            console.log(book.id);
             return searchWords.every((word) => book.title.toLowerCase().includes(word));
         });
 
@@ -100,22 +94,14 @@ export default function SearchBar({ data }) {
                     <div className="dataResult text-justify grid rounded-lg overflow-hidden overflow-y-scroll absolute left-0 right-0  text-gray-800 bg-[#FEF9EF]">
                         {filtrData.slice(0.15).map((book, i) => {
                             return (
-                                <a className="dataItem text-lg hover:bg-gray-300 p-1" onClick={handleBookPage} key={i}>
-                                    <p>{book.title}</p>
-                                    <p className="text-xs">{book.author} - {book.genre}</p>
-                                </a>
+                                <Link to={`/books/${book.id}`} reloadDocument className="dataItem text-lg hover:bg-gray-300 p-1" key={i}>
+                                        <p>{book.title}</p>
+                                        <p className="text-xs">{book.author} - {book.genre}</p>
+                                </Link>
                             );
                         })}
                     </div>
                 )}
-
-                {
-                    isTrue ? (
-                        <BookPage book={bookInfo} />
-                    ) : (
-                        null
-                    )
-                }
             </div>
         </>
     );

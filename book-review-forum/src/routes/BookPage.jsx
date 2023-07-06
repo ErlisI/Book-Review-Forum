@@ -14,6 +14,7 @@ export async function loader({ params }) {
 
   const responseReview = await fetch(`http://localhost:3000/reviews?bookId=${params.id}`);
   const reviews = await responseReview.json();
+  
   return { book, reviews };
 }
 

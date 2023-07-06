@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 import books from './books';
 
 export default function NavBar() {
+
   return (
     <>
       <nav className="bg-type-of-red p-2">
@@ -14,9 +15,9 @@ export default function NavBar() {
           </button>
 
           <div className="flex flex-wrap justify-left items-center p-4">
-            <a href="index.html" className="flex items-center">
-              <img src="/src/assets/icons8-logo-50.png" className="h-8 mr-3" alt="Flowbite Logo" />
-            </a>
+            <Link to={`/`} className="flex items-center">
+              <img src="/src/assets/icons8-logo-50.png" className="h-8 mr-3" alt="Logo" />
+            </Link>
 
             <div className="hidden w-full md:block md:w-auto" id="navbar-default">
               <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
@@ -34,24 +35,24 @@ export default function NavBar() {
           </div>
 
           {/* Search Bar */}
-          <SearchBar data={books}/>
+          <SearchBar data={books} />
 
           {/* Icons */}
           <div className="ml-auto flex flex-wrap justify-end items-center p-4">
             <div className="hidden w-full md:block md:w-auto" id="navbar-default">
               <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
                 <li>
-                  <a href="">
+                  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                     <ion-icon size="large" name="logo-instagram"></ion-icon>
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                     <ion-icon size="large" name="logo-facebook"></ion-icon>
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                     <ion-icon size="large" name="logo-twitter"></ion-icon>
                   </a>
                 </li>

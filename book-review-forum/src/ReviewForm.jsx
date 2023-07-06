@@ -23,6 +23,7 @@ export default function ReviewForm({ hideModal, bookId }) {
         e.preventDefault();
         setReviewFormState(initialReviewFormState);
         hideModal();
+        window.location.reload();
 
         const preparedReview = {
             ...reviewFormState,
